@@ -16,4 +16,7 @@ function scale.new(mode, w, h, ww, wh)
   }, mt[mode])
 end
 
+local s = mt.stretch
+local c = mt.center
+
 return scale
