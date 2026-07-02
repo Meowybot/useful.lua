@@ -19,7 +19,7 @@ function scale.new(mode, w, h, ww, wh)
     y = h/wh
   }
   t.to = {
-    x = ww/w
+    x = ww/w,
     y = wh/h
   }
   return t
@@ -29,11 +29,11 @@ local s = mt.stretch
 -- local c = mt.center
 
 function s:fromPixels(x,y)
-  return x*self.from[x], y*self.from[y]
+  return x*self.from["x"], y*self.from["y"]
 end
 
 function s:toPixels(x,y)
-  return x*self.to[x], y*self.to[y]
+  return x*self.to["x"], y*self.to["y"]
 end
 
 return scale
